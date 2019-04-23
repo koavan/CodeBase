@@ -1,0 +1,571 @@
+1. How Many X's?
+name : "countXInRange"
+
+tc01 : 
+	Input:
+		2
+		3
+		100 250
+		0
+		20 21
+	Output:
+		35
+		0
+
+tc02 : 
+	Input:
+		3
+		2
+		10000 12345
+		9
+		899 1000
+		1
+		1100 1345
+	Output:
+		1120
+		120
+		398
+		
+tc03 :
+	Input: 
+		5
+		7
+		1000 9999
+		1
+		345 11852
+		4
+		55768 100000
+		1
+		1000 100000
+		9
+		2500 11800
+	Output:
+		3700
+		7105
+		17243
+		49699
+		3760
+
+2. Find the Minimum difference pair		
+name : "minDifferencePair"
+
+tc01 : 
+	Input:
+		2
+		5
+		2 4 5 7 9
+		10
+		87 32 99 75 56 43 21 49 10 68 
+	Output:
+		1
+		6
+		
+tc02 :
+	Input:
+		3
+		8
+		13 27 8 41 35 3 11 47
+		11
+		89 54 77 31 24 68 19 45 10 49 17
+		15
+		15 12 7 3 10 6 1 11 2 8 9 13 4 14 5
+	Output:
+		2
+		2
+		1
+
+tc03 :
+	Input:
+		5
+		25
+		272 213 334 153 245 338 216 281 379 327 210 309 164 496 171 150 147 335 413 474 450 473 446 306 192
+		30
+		137 113 483 61 248 415 372 410 311 405 251 186 167 363 429 218 446 132 356 256 58 150 367 65 492 315 349 236 74 91
+		35
+		536 827 585 681 225 662 900 852 569 355 130 724 721 804 334 478 192 833 195 233 797 771 246 87 811 903 802 714 630 105 487 175 498 180 632
+		10
+		1103 1369 3680 3771 2582 3452 1238 2569 2355 1576
+		50
+		1090 1942 9251 3026 8718 5534 4959 1682 1937 2533 4219 9854 4016 6819 8620 7503 568 1849 6620 360 2198 4367 8433 8904 598 9362 5719 1686 4981 2889 8863 5620 6075 364 4286 8444 5232 4584 2805 7286 6429 7815 6645 1181 1691 1273 9268 5579 3130 5629
+	Output:
+		1
+		3
+		2
+		13
+		4
+
+3. Find the Maximum money
+name: "maxMoney"
+
+tc01 : 
+	Input:
+		2
+		5 10
+		2 12
+	Output:
+		30
+		12
+		
+tc02 : 
+	Input:
+		4
+		4 25
+		7 13
+		10 27
+		17 45
+	Output:
+		50
+		52
+		135
+		405
+	
+tc03 :
+	Input:
+		7
+		99 17
+		106 8
+		127 76
+		248 44
+		117 38
+		430 23
+		841 12
+	Output:
+		850
+		424
+		4864
+		5456
+		2242
+		4945
+		5052
+		
+4. Rotate Array
+name: "rotateArrayNTimes"
+
+tc01 : 
+	Input:
+		2
+		5 2
+		1 2 3 4 5 
+		10 3
+		2 4 6 8 10 12 14 16 18 20
+	Output:
+		3 4 5 1 2
+		8 10 12 14 16 18 20 2 4 6
+
+tc02 :
+	Input:
+		4
+		10 3
+		44 38 46 5 27 15 35 18 47 39
+		18 8
+		81 32 5 29 50 10 49 104 77 98 2 74 94 47 0 99 39 58
+		106 44
+		53 26 18 19 26 56 23 75 91 43 14 42 54 71 37 26 7 21 8 70 65 64 80 47 90 91 18 16 51 69 83 84 95 55 29 20 102 94 8 40 50 105 39 22 1 49 11 79 6 14 100 54 10 87 44 94 97 90 103 83 32 81 96 0 42 64 72 104 13 57 80 52 88 20 87 80 93 86 32 46 64 80 101 84 53 30 73 30 28 100 103 92 53 99 95 45 54 64 85 16 33 61 68 22 36 87 
+		51 10
+		16 16 4 68 15 35 53 40 78 14 86 97 80 89 80 99 33 65 100 24 51 18 74 79 66 104 66 26 78 0 64 1 101 53 80 53 25 41 26 79 27 80 11 54 75 67 53 102 20 56 0
+	Output:
+		5 27 15 35 18 47 39 44 38 46
+		77 98 2 74 94 47 0 99 39 58 81 32 5 29 50 10 49 104
+		1 49 11 79 6 14 100 54 10 87 44 94 97 90 103 83 32 81 96 0 42 64 72 104 13 57 80 52 88 20 87 80 93 86 32 46 64 80 101 84 53 30 73 30 28 100 103 92 53 99 95 45 54 64 85 16 33 61 68 22 36 87 53 26 18 19 26 56 23 75 91 43 14 42 54 71 37 26 7 21 8 70 65 64 80 47 90 91 18 16 51 69 83 84 95 55 29 20 102 94 8 40 50 105 39 22
+		86 97 80 89 80 99 33 65 100 24 51 18 74 79 66 104 66 26 78 0 64 1 101 53 80 53 25 41 26 79 27 80 11 54 75 67 53 102 20 56 0 16 16 4 68 15 35 53 40 78 14		
+		
+5. Twice counter
+name : "wordTwiceCounter"
+
+tc01 : 
+	Input:
+		2
+		10
+		hate love peace love peace hate love peace love peace
+		8
+		Tom Jerry Thomas Tom Jerry Courage Tom Courage
+		Output:
+		1
+		2
+
+tc02 : 
+	Input:
+		2
+		15
+		hai sri shakthi welcome to sri shakthi itvac team itvac of cdc coimbatore hello guys
+		16
+		betty botter bought some butter but the butter was bitter so betty botter bought better butter
+	Output:
+		3
+		3
+
+6. Count total set bits
+name : "countSetBits"
+
+tc01 : 
+	Input:
+		2
+		4
+		17
+	Output:
+		5
+		35
+		
+tc02 :
+	Input:
+		4
+		37
+		45
+		52
+		60
+	Output:
+		93
+		119
+		143
+		176
+
+tc03 :
+	Input:
+		4
+		69
+		77
+		94
+		100
+	Output:
+		205
+		231
+		298
+		319
+	
+7. Remove Characters
+name : "removeStringChars"
+
+tc01 : 
+	Input:
+		2
+		itvaccodingteam
+		caw
+		removeccharaterfrom
+		string
+
+	Output:
+		itvodingtem
+		emovecchaaefom
+
+tc02 :
+	Input:
+		4
+		srishakthi
+		api
+		mysqldatabaseworksfine
+		after
+		mediumlevelcomplexityisbetter
+		languagesettings
+		generateandprintallbinarynumberswithdecimalvalues
+		secondtestcase
+	Output:
+		srshkth
+		mysqldbswoksin
+		mdmvcompxybr
+		grprillbiryumbrwihimlvlu
+
+8. Generate Binary Numbers
+name : "genBinaryNos"
+
+tc01 :
+	Input: 
+		2
+		2
+		5
+	Output:
+		1 10
+		1 10 11 100 101
+
+tc02 :
+	Input:
+		4
+		8
+		11
+		17
+		20
+	Output:
+		1 10 11 100 101 110 111 1000 
+		1 10 11 100 101 110 111 1000 1001 1010 1011 
+		1 10 11 100 101 110 111 1000 1001 1010 1011 1100 1101 1110 1111 10000 10001
+		1 10 11 100 101 110 111 1000 1001 1010 1011 1100 1101 1110 1111 10000 10001 10010 10011 10100	
+		
+9. Keypad typing
+name : "stringKeyMapping"
+
+tc01 :
+	Input:
+		2
+		itvaccoding
+		vacquiz
+
+	Output:
+		48822263464
+		8227849
+
+tc02 :
+	Input:
+		4
+		generators
+		personalfirewall
+		exterNALinteRface
+		StringKeyMapping
+	Output:
+		4363728677
+		7377662534739255
+		39837625468373223
+		7874645396277464
+
+10. Greater on right side
+name : "greatOnRight"
+
+tc01 :
+	Input:
+		2
+		6
+		16 17 4 3 5 2
+		4
+		2 3 1 9
+	Output:
+		17 5 5 5 2 -1
+		9 9 9 -1
+
+tc02 : 
+	Input:
+		3
+		8
+		34 45 93 84 90 11 71 59
+		15
+		16 5 40 22 52 24 48 19 62 37 29 12 55 24 11
+		20
+		204 287 298 40 151 142 118 144 63 11 74 225 133 146 163 117 184 244 260 88
+	Output:
+		93 93 90 90 71 71 59 -1
+		62 62 62 62 62 62 62 62 55 55 55 55 24 11 -1
+		298 298 260 260 260 260 260 260 260 260 260 260 260 260 260 260 260 260 88 -1
+		
+11. Addition of sub-matrix
+name : "addSubMatrix"
+
+tc01 :
+	Input:
+		2
+		5 6
+		1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+		3 4 4 5
+		3 3
+		9 8 7 4 2 1 6 5 3
+		1 2 3 3
+	Output:
+		78
+		26
+		
+tc02 :
+	Input:
+		2
+		4 4
+		33 71 44 77 50 82 74 26 38 19 70 15 71 87 52 17
+		1 2 4 3
+		6 6
+		33 71 44 77 93 42 50 82 74 26 50 0 38 19 70 15 14 23 71	87 52 17 99	91 68 53 3 63 37 57 12 84 79 50 25 40
+		2 2 5 5
+	Output:
+		499
+		761
+
+12. Geek and Coffee Shop
+name : "geeksCoffee"
+
+tc01 :
+	Input:
+		2
+		100 4
+		10 3
+	Output:
+		12
+		2
+
+tc02 :
+	Input:
+		3
+		150 6
+		150 10
+		220 7
+	Output:
+		4
+		0
+		3
+		
+13. Maximum product of two numbers
+name : "maxProductInArray"
+
+tc01 : 
+	Input:
+		2
+		5
+		1 100 42 4 23
+		3
+		20 30 40
+	Output:
+		4200
+		1200
+		
+tc02 :
+	Input:
+		4
+		5
+		44 33 54 79 23
+		10
+		19 37 56 74 83 0 79 82 17 28
+		20
+		82 3 11 42 82 6 50 89 100 66 83 12 68 69 66 5 15 20 36 97
+	Output:
+		4266
+		6806
+		9700
+
+14. Decode the pattern
+name : "oneOnePattern"
+
+tc01 :
+	Input:
+		2
+		2
+		4
+	Output:
+		11
+		121
+		11
+		121
+		1331
+		14641
+		
+tc02 :
+	Input:
+		3
+		5
+		8
+	Output: 
+		11
+		121
+		1331
+		14641
+		161051
+		11
+		121
+		1331
+		14641
+		161051
+		1771561
+		19487171
+		214358881
+
+17. Implement strstr
+name : "manualSubString"
+
+tc01 :
+	Input:
+		2
+		ItVACForSuccess	
+		Fr
+		ITVACForsuccess	
+		For
+	Output:
+		-1
+		5
+
+tc02 :
+	Input:
+		2
+		WelcomeToSriShakthi
+		oSr
+		Hello!There...
+		the
+	Output:
+		8
+		6
+
+18. Binary String
+name : "binaryStartAndEnd"
+
+	tc01 :
+		Input:
+			2
+			4
+			1111
+			5
+			01101
+
+		Output:
+			6
+			3
+
+	tc02 :
+		Input:
+			3
+			7
+			1011011
+			10
+			1001100010
+			17
+			11101001100000101
+		Output:
+			10
+			6
+			28
+
+20. Reverse each word in a given string
+name : "reverseEachWord"
+
+tc01 :
+	Input:
+		2
+		i like this program very much
+		hello
+	Output:
+		i ekil siht margorp yrev hcum
+		olleh
+		
+tc02 : 
+	Input:
+		3
+		Reverse each word in a given string without using inbuilt functions
+		IT-VAC for Success
+		This connection is not visible on any external interface
+	Output:
+		esreveR hcae drow ni a nevig gnirts tuohtiw gnisu tliubni snoitcnuf
+		CAV-TI rof sseccuS
+		sihT noitcennoc si ton elbisiv no yna lanretxe ecafretni
+		
+21. Capitalize first letter of each word		
+name : "capitalizeFirstLetter"	
+		
+tc01 :
+	Input:
+		2
+		i like this. program very much
+		IT-VAC for success
+	Output:
+		I Like This. Program Very Much
+		IT-VAC For Success
+
+tc02 :
+	Input:
+		3
+		this connection is not visible
+		Given a String of length N
+		....
+	Output:
+		This Connection Is Not Visible
+		Given A String Of Length N
+		....
+		
+		
+		
+		
+		
+		
+
+
+	
+		
+		
