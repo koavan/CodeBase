@@ -232,7 +232,7 @@ tc03 :
 		298
 		319
 	
-7. Remove Characters
+7. Remove Characters in a String
 name : "removeStringChars"
 
 tc01 : 
