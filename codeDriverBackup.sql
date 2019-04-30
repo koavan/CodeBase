@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS `problempool` (
   UNIQUE KEY `pblmName` (`pblmName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table codedriver.problempool: ~43 rows (approximately)
+-- Dumping data for table codedriver.problempool: ~47 rows (approximately)
 /*!40000 ALTER TABLE `problempool` DISABLE KEYS */;
-REPLACE INTO `problempool` (`ID`, `pblmName`, `question`, `description`, `complexity`, `pblmType`, `pblmTags`) VALUES
+INSERT INTO `problempool` (`ID`, `pblmName`, `question`, `description`, `complexity`, `pblmType`, `pblmTags`) VALUES
 	('pattern01', 'starPatternNormal', 'Write a program to print star pattern ', '    *\n  ***\n*****', 'EASY', 'SELF', NULL),
 	('pattern02', 'oneOnePattern', 'Decode the pattern', 'Given a pattern as below and an integer n your task is to decode it and print nth row of it. The pattern follows as :\n11\n121\n1331\n14641\n\nNote : Save the file / class as “oneOnePattern” with appropriate file extension.\n\nInput:\nThe first line of input is the number of test cases .  Then T test cases follow . The first line of each test case is an integer N.\n\nOutput:\nFor each test case print the required nth row of the pattern.\n\nConstraints:\n1<=T<=20\n1<=N<=20\n\nExample:\nInput:\n2\n2\n4\nOutput:\n11\n121\n11\n121\n1331\n14641\n', 'EASY', 'SELF', NULL),
 	('ps-array-01', 'missingNumber', 'Find the Missing Number', 'You are given a list of n-1 integers and these integers are in the range of 1 to n. There are no duplicates in list. One of the integers is missing in the list. Write an efficient code to find the missing integer. If no number is missing print -1.\n\nFile / Class name should be "missingNumber".\n\nInput Format :\nN - size of the array\n\'N\' integer values\n\nOutput Format : \nSingle integer which is missing in the array\n\nSample IO : \nInput :  \n7\n1 2 4 6 3 7 8\n\nOutput :\n5', 'EASY', 'SELF', NULL),
@@ -106,9 +106,9 @@ CREATE TABLE IF NOT EXISTS `testcasepool` (
   UNIQUE KEY `tcName` (`tcName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table codedriver.testcasepool: ~42 rows (approximately)
+-- Dumping data for table codedriver.testcasepool: ~47 rows (approximately)
 /*!40000 ALTER TABLE `testcasepool` DISABLE KEYS */;
-REPLACE INTO `testcasepool` (`TCID`, `tcName`, `tcCount`, `pblmIDs`, `input1`, `output1`, `sample1`, `input2`, `output2`, `sample2`, `input3`, `output3`, `sample3`, `input4`, `output4`, `sample4`, `input5`, `output5`, `sample5`) VALUES
+INSERT INTO `testcasepool` (`TCID`, `tcName`, `tcCount`, `pblmIDs`, `input1`, `output1`, `sample1`, `input2`, `output2`, `sample2`, `input3`, `output3`, `sample3`, `input4`, `output4`, `sample4`, `input5`, `output5`, `sample5`) VALUES
 	('ARR-ARRANGE-1-0', 'ArrayArrangeOneZero', 2, 'ps-array-09', '[10,0,1,0,1,0,0,1,1,1,0]', '["0 0 0 0 0 1 1 1 1 1 "]', b'1', '[15,0,1,1,0,1,1,1,0,0,0,0,1,1,1,0]', '["0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 "]', b'0', NULL, NULL, b'0', NULL, NULL, b'0', NULL, NULL, b'0'),
 	('ARR-BIRD-FREQ', 'ArrayFrequentNum', 2, 'ps-array-14', '[6,1,4,4,4,5,3]', '[4]', b'1', '[11,1,2,3,4,5,4,3,2,1,3,4]', '[3]', b'1', NULL, NULL, b'0', NULL, NULL, b'0', NULL, NULL, b'0'),
 	('ARR-COM-ELMNTS', 'ArrayCommonElements', 2, 'ps-array-04', '[6,1,5,10,20,40,80,5,6,7,20,80,100,8,3,4,15,20,30,70,80,120]', '[20,80]', b'1', '[8,11,15,21,35,44,78,89,110,5,6,7,11,15,100,7,3,4,15,20,30,70,100]', '[15]', b'0', NULL, NULL, b'0', NULL, NULL, b'0', NULL, NULL, b'0'),
