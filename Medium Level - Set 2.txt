@@ -1,0 +1,213 @@
+1. Sorting Elements of an Array by Frequency 
+
+Given an array A[] of integers, sort the array according to frequency of elements. That is elements that have higher frequency come first. If frequencies of two elements are same, then smaller number comes first.
+
+Note : The file/class should be named as "SortNumArrayByFreq" with appropriate file extension.
+
+Input:
+The first line of input contains an integer T denoting the number of test cases. The description of T test cases follows. The first line of each test case contains a single integer N denoting the size of array. The second line contains N space-separated integers A1, A2, ..., AN denoting the elements of the array.
+
+Output:
+For each test-case, in a new line, print each sorted array in a separate line. For each array its numbers should be separated by space.
+
+Constraints:
+1 <= T <= 70
+30 <= N <= 130
+1 <= Ai <= 60 
+
+Example:
+Input 1:
+2
+5
+5 5 4 6 4
+5
+9 9 9 2 5
+
+Output 1:
+4 4 5 5 6
+9 9 9 2 5
+
+Explanation:
+Testcase1: The highest frequency here is 2. Both 5 and 4 have that frequency. Now since the frequencies are same then smaller element comes first. So 4 4 comes first then comes 5 5. Finally comes 6.
+The output is 4 4 5 5 6.
+
+Input 1:
+3
+7
+3 4 9 5 4 2 3
+7
+5 4 5 2 4 3 2
+15
+9 9 2 5 12 5 4 2 3 3 10 4 9 11 15 
+Output 1:
+2 3 3 4 4 5 9
+2 2 3 4 4 5 5
+2 2 3 3 4 4 5 5 9 9 9 10 11 12 15
+
+
+2. Extract the Number from the String 
+
+Benny once had trouble finding the numbers in a string. The numbers are distributed in a string across various test cases.
+There are various numbers in each test case you need to find the number in each test case. Each test case has various numbers in sequence. You need to find only those numbers which do not contain 9. For eg, if the string contains "hello this is alpha 5051 and 9475".You will extract 5051 and not 9475. You need only those numbers which are consecutive and you need to help him find the numbers.  
+
+Note: Use long long for storing the numbers from the string.
+
+Note : The file/class should be named as "ExtractNumFromString" with appropriate file extension.
+
+Input:
+The first line consists of T test cases and next T lines contain a string.
+Length of each string S may be between 1 to 1000. 
+
+Output:
+For each string output the number stored in that string if various numbers are there print the largest one. If a string has no numbers print -1.
+
+Constraints:
+1<=T<=100
+1<=|S|<=1000
+
+Example:
+Input 1:
+	2
+	This is alpha 5057 and 97
+	GSLV F11 was launched in December 19, 2018 
+Output 1:
+	5057 97
+	11 19 2018
+Input 2:
+	3
+	In 2nd innings India scored 436 runs with 3 more wickets
+	In winter temperature falls below -4 degree Celsius
+	Absolute zero is defined as 0 K on the Kelvin scale and –273.15 degrees Celsius on the Celsius scale.
+Output 2:
+	2 436 3
+	-4
+	0 -273.15
+
+3. Valid Parenthesis String
+
+Given a string containing only three types of characters: '(', ')' and '*', write a function to check whether this string is valid. We define the validity of a string by these rules:
+
+Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+Any right parenthesis ')' must have a corresponding left parenthesis '('.
+Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+'*' could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string.
+An empty string is also valid.
+
+Note : The file/class should be named as "ValidParenthesis" with appropriate file extension.
+
+Note:
+The string size will be in the range [1, 100].
+
+Example:
+Input 1 : 
+	3
+	()
+	(*)
+	)(*)
+Output 1 : 
+	True
+	True
+	False
+	
+Input 2 :
+	3
+	(*))
+	(*()(
+	(())
+	
+Output 2 : 
+	True
+	False
+	True
+
+4. Time Conversion 
+Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+
+Note : The file/class should be named as "TimeConversion" with appropriate file extension.
+
+Input Format
+A single string s containing a time in 12-hour clock format (i.e.: hh:mm:ssAM or hh:mm:ssPM ), where 01<= hh <= 12 and 00 <= mm, ss <= 59.
+
+Constraints
+All input times are valid
+
+Output Format
+Convert and print the given time in 24-hour format, where 00 <= hh <= 23.
+
+Sample Input 1 : 
+07:05:45PM
+
+Sample Output 1 :
+19:05:45
+
+Sample Input 2 : 
+12:05:15PM
+
+Sample Output 2 :
+12:05:15
+
+Sample Input 3 : 
+12:15:00AM
+
+Sample Output 3 :
+00:15:00
+
+Sample Input 4 : 
+08:30:00AM
+
+Sample Output 4 :
+08:30:00
+
+5. You have been asked to help study the population of birds migrating across the continent. 
+Each type of bird you are interested in will be identified by an integer value. 
+Each time a particular kind of bird is spotted, its id number will be added to your array of sightings. 
+You would like to be able to find out which type of bird is most common given a list of sightings. 
+Your task is to print the type number of that bird and if two or more types of birds are equally common, choose the type with the smallest ID number.
+For example, assume your bird sightings are of types arr=[1,1,2,2,3]. There are two each of types 1 and 2 , and one sighting of type 3. Pick the lower of the two types seen twice: type 1.
+
+Note : The file/class should be named as "TimeConversion" with appropriate file extension.
+
+Input Format
+The first line contains an integer denoting n, the number of birds sighted and reported in the array arr. 
+The second line describes arr as n space-separated integers representing the type numbers of each bird sighted.
+
+Constraints
+5 <= n <= 2*10^5
+It is guaranteed that each type is 1, 2, 3, 4, or 5.
+
+Output Format
+Print the type number of the most common bird; if two or more types of birds are equally common, choose the type with the smallest ID number.
+
+Sample Input 0
+6
+1 4 4 4 5 3
+
+Sample Output 0
+4
+
+Explanation 0
+The different types of birds occur in the following frequencies:
+Type 1: 1 bird
+Type 2: 0 birds
+Type 3: 1 bird
+Type 4: 3 birds
+Type 5: 1 bird
+The type number that occurs at the highest frequency is type 4, so we print 4 as our answer.
+
+Sample Input 1
+11
+1 2 3 4 5 4 3 2 1 3 4
+Sample Output 1
+3
+
+Explanation 1
+The different types of birds occur in the following frequencies:
+•	Type 1: 2 birds
+•	Type 2: 2 birds
+•	Type 3: 3 birds
+•	Type 4: 3 birds
+•	Type 5: 1 bird
+Two types have a frequency of 3, and the lower of those is type 3.
+
+
