@@ -210,4 +210,701 @@ The different types of birds occur in the following frequencies:
 •	Type 5: 1 bird
 Two types have a frequency of 3, and the lower of those is type 3.
 
+-------------------------------------------------------------------
+
+1. Write a program to find longest binary gap in a given number.
+
+A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+
+Note : The file/class should be named as "LongestBinaryGap" with appropriate file extension.
+
+For example, 
+Number 9 has binary representation 1001 and contains a binary gap of length 2. 
+The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. 
+The number 20 has binary representation 10100 and contains one binary gap of length 1. 
+The number 15 has binary representation 1111 and has no binary gaps. 
+The number 32 has binary representation 100000 and has no binary gaps.
+
+For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5. Given N = 32 the function should return 0, because N has binary representation '100000' and thus no binary gaps.
+
+Write an efficient algorithm for the following assumptions:
+N is an integer within the range [1..2,147,483,647].
+
+Input Format : 
+Input contains a single line which consists of a single Integer.
+
+Output Format : 
+Output consists of a single integer.
+
+Test Case 1 :
+Input : 
+	125
+Output : 
+	1
+	
+Test Case 2 :
+Input : 
+	32
+Output : 
+	0
+	
+Test Case 3 :
+Input : 
+	714
+Output : 
+	2
+	
+Test Case 4 :
+Input : 
+	305
+Output : 
+	3
+
+2. Write a program to calculate profit from a set of share prices.
+
+An array A consisting of N integers is given. It contains daily prices of a stock share for a period of N consecutive days. If a single share was bought on day P and sold on day Q, where 0 <= P <= Q < N, then the profit of such transaction is equal to A[Q] − A[P], provided that A[Q] >= A[P]. 
+Otherwise, the transaction brings loss of A[P] − A[Q].
+
+For example, consider the following array A consisting of six elements such that:
+A[0] = 23171 A[1] = 21011 A[2] = 21123 A[3] = 21366 A[4] = 21013 A[5] = 21367
+
+If a share was bought on day 0 and sold on day 2, a loss of 2048 would occur because A[2] − A[0] = 21123 − 23171 = −2048. 
+If a share was bought on day 4 and sold on day 5, a profit of 354 would occur because A[5] − A[4] = 21367 − 21013 = 354. 
+Maximum possible profit was 356. It would occur if a share was bought on day 1 and sold on day 5.
+
+Write an efficient algorithm for the following assumptions:
+N is an integer within the range [0..400,000];
+each element of array A is an integer within the range [0..200,000].
+
+Note : The file/class should be named as "ShareMarketProfit" with appropriate file extension.
+
+Input Format : 
+First line of input consists of a single integer 'N' which is the size of the array.
+Next 'N' lines consists of 'N' integers which are part of array A.
+
+Output Format : 
+Output consists of a single integer which is the maximum profit that the user can earn.
+
+Test Input 1 : 
+	6
+	23187
+	92727
+	231
+	4563
+	123131
+	1311
+Output:  
+	122900
+
+Test Input 2 : 
+	4
+	200
+	200
+	200
+	200
+Output:  
+	0
+	
+Test Input 3 : 
+	6
+	123
+	754
+	1543
+	2413
+	8575
+	1231
+Output:  
+	8452
+
+Test Input 4 : 
+	6
+	500
+	1500
+	3000
+	2800
+	5000
+	4000
+Output:  
+	3500
+
+3. Write a program to find the number of semi-prime numbers within a set of ranges.
+
+A prime is a positive integer X that has exactly two distinct divisors: 1 and X. The first few prime integers are 2, 3, 5, 7, 11 and 13.
+
+A semi-prime is a natural number that is the product of two (not necessarily distinct) prime numbers. The first few semi-primes are 4, 6, 9, 10, 14, 15, 21, 22, 25, 26.
+
+You are given two non-empty arrays P and Q, each consisting of M integers. These arrays represent queries about the number of semi-primes within specified ranges.
+
+Query K requires you to find the number of semi-primes within the range (P[K], Q[K]), where 1 <= P[K] <= Q[K] <= N.
+
+For example, consider an integer N = 26 and arrays P, Q such that:
+P[0] = 1 Q[0] = 26 P[1] = 4 Q[1] = 10 P[2] = 16 Q[2] = 20
+The number of semi-primes within each of these ranges is as follows:
+(1, 26) is 10,
+(4, 10) is 4,
+(16, 20) is 0.
+
+Write an efficient algorithm for the following assumptions:
+N is an integer within the range [1..50,000];
+each element of arrays P, Q is an integer within the range [1..1000];
+P[i] <= Q[i].
+
+Note : The file/class should be named as "SemiPrimeArray" with appropriate file extension.
+
+Input Format : 
+First line of input consists of a single integer 'N' which is the size of the array.
+Next 2*N lines consists of N integers which are part of array P and N integers which are part of array Q.
+
+Output Format : 
+Output consists of a single integer which is the maximum profit that the user can earn.
+
+Test case 1: 
+	4
+	1
+	12
+	34
+	23
+	12
+	23
+	67
+	71
+Output : 
+	4 4 12 16
+
+Test case 2: 
+	3
+	1
+	5
+	20
+	12
+	14
+	23
+Output : 
+	4 4 2
+
+Test case 3: 
+	4
+	6
+	8
+	12
+	26
+	18
+	81
+	70
+	38
+Output : 
+	5 4 24 5
+	
+Test case 4: 
+	4
+	4
+	2
+	5
+	3
+	13
+	7
+	14
+	9
+Output : 
+	4 2 4 3
+ 
+4. Write a program to find the dominator element of an array.
+
+An array A consisting of N integers is given. The dominator of array A is the value that occurs in more than half of the elements of A.
+
+For example, consider array A such that
+A[0] = 3 A[1] = 4 A[2] = 3 A[3] = 2 A[4] = 3 A[5] = -1 A[6] = 3 A[7] = 3
+
+The dominator of A is 3 because it occurs in 5 out of 8 elements of A (namely in those with indices 0, 2, 4, 6 and 7) and 5 is more than a half of 8.
+
+Write an efficient algorithm for the following assumptions:
+N is an integer within the range [0..100,000];
+each element of array A is an integer within the range [1..2,147,483,647].
+
+Note : The file/class should be named as "DominatorElement" with appropriate file extension.
+
+Input Format : 
+First line of input consists of a single integer 'N' which is the size of the array.
+Next N lines consists of N integers which are part of the array A.
+
+Output Format : 
+Output consists of a single integer which is the dominator of the given array. If no such element is found print -1.
+
+Test case 1: 
+Input : 
+	8
+	2
+	34
+	33
+	11
+	33
+	44
+	44
+	233
+Output : 
+	-1
+
+Test case 2: 
+Input : 
+	10
+	2
+	3
+	2
+	3
+	2
+	3
+	2
+	3
+	3
+	2
+Output : 
+	-1
+
+Test case 3: 
+Input : 
+	10
+	2
+	3
+	2
+	2
+	3
+	3
+	2
+	2
+	2
+	7
+Output :  
+	2
+
+Test case 4: 
+Input : 
+	5
+	13
+	14
+	13
+	11
+	13
+Output : 
+	13
+
+5. Numbers divisible by 'K' in a range.
+
+Write a program that given three integers A, B and K, prints the number of integers within the range [A - B] that are divisible by K.
+
+For example, for A = 6, B = 11 and K = 2, your function should return 3, because there are three numbers divisible by 2 within the range [6..11], namely 6, 8 and 10.
+
+Write an efficient algorithm for the following assumptions:
+A and B are integers within the range [0..2,000,000,000];
+K is an integer within the range [1..2,000,000,000];
+A <= B.
+
+Note : The file/class should be named as "DivisibleByKInRange" with appropriate file extension.
+
+Input Format : 
+The first line of input consists of a single Integer A (lower range).
+The second line of input consists of a single Integer B (upper range).
+The third line of input consists of a single Integer K.
+
+Output Format : 
+Output consists of a single integer which is the number of integers divisible by K within the range A-B.
+
+Test Case 1:
+Input : 
+	5
+	15
+	6
+Output : 
+	2
+
+Test Case 2:
+Input : 
+	2
+	9
+	1
+Output : 
+	8 
+
+Test Case 3:
+Input : 
+	2
+	10
+	2
+Output : 
+	5
+
+Test Case 4:
+Input : 
+	8
+	23
+	4
+Output : 
+	4 
+
+Test Case 5:
+Input : 
+	10
+	20
+	8
+Output : 
+	1
+
+
+
+*********************Six Phrase Questions************************
+
+1. DRK, the famous magician of MACTLand, had gone outside to visit Fruit Garden. As the order of the MACTLand had decided, the entry to the land was prohibited after 11:00 PM. 
+As he might get late, he decided to bribe the gatekeepers, by telling them about this divine fruit which was very delicious and unique. They agreed to the deal that if he brings a divine fruit for each of the N gatekeepers, then he will be allowed to enter the MACTLand.
+
+As he knows, there is no such thing called divine fruit so he decides to bring N simple fruits of same kind from the garden.
+
+Luckily, There were exactly N trees in a row each of them having one fruit but they were of one of the two kinds RED or GREEN. DRK needed all fruit of same kind so he decided to use his magical powers.
+
+In one second, he can convert all the RED fruits, which are immediate right to GREEN fruits, to GREEN or all the GREEN fruits, which are immediate right to RED fruits, to RED.
+
+You are required to print the minimum number of seconds required by DRK to convert all the FRUITS to one of the colours so that he can go back quickly.
+
+Input Format:
+The first line of the input contains a single integer N.
+The Second line of the input contains N space separated integers. Each integer is either 0 or 1. 0 denotes RED Fruits, 1 denotes GREEN Fruits.
+
+Output Format:
+A single integer denoting minimum time required by DRK to convert all the fruit of same kind.
+
+Constraints:
+1 ≤ N ≤ 1000
+
+Sample Input :
+	10
+	0 0 1 0 0 0 1 1 0 0
+
+Sample Output :
+	2
+
+Explanation :
+We can either convert all '0's to '1's or all '1's to '0's.
+If we try to convert all '1's to '0's, in 1 second, the array becomes
+0 0 0 0 0 0 0 1 0 0
+
+after 1 more second
+0 0 0 0 0 0 0 0 0 0
+
+So total minimum possible time equals 2 seconds.
+
+2. Introduction to programming is considered as easiest subject among the students of first years (well ,usually). 
+So they are not focusing much on lectures. when professor realises this he becomes very angry and plans to fail all the students of the batch.
+
+He writes a very big number on the whiteboard and says : This will be the minimum mark required to pass this course . 
+When students see this gigantic number written on the whiteboard most of them become pretty sure that they are going to fail this semester.
+
+So the some of the students started trying to convince the professor to not do so. So the professor gives them a number K and says : You can erase exactly K digits of the given number.
+
+Now students want to make this number as small as possible. So you being the second most intelligent student of the batch decide to solve the problem. Save the other students.
+
+Input
+The only line in the input contains one string denoting the number written on the whiteboard and integer K.
+
+Output
+Output the minimum number you can make without any trailing zeroes.
+
+Constraints
+1<=Length of String<=500000
+1<=K<= Length of String
+
+Sample Input :
+	1023231 3
+
+Sample Output : 
+	221
+
+3. After performing a lot of experiments at the SEGP and EEDC Lab, you need a break. You see your roommate stuck at a math problem. He asks for your help and says he will give you party at the NC if you solve this problem for him.
+
+The problem is:
+Initially you are given the number 0. After each day the number doubles itself. At any day, you can add the number 1 any number of times during the day.
+
+You are given a number N and you need to tell the minimum number of times you have to add 1 to get N at any point of time.
+
+Since you are very hungry, solve this problem for him to get something to eat for free.
+
+Input Format:
+The first line contains a single integer T denoting the number of test cases.
+Next T lines contain the integer N.
+
+Output Format:
+For every test case print the required output.
+
+Constraints:
+1<=T<=100
+1  <=N<= 10^9
+
+Sample Input :
+	4
+	4
+	8
+	7
+	5
+
+Sample Output :
+	1
+	1
+	3
+	2
+
+Explanation : 
+For 8, you need to add 1 only once at the starting. It will double to 2, then to 4, then to 8.
+
+For 5, you need to add 1 at the beginning, it will double to 2, then to 4, then you will have to add 1 again to make it 5. So, answer is 2.
+
+4. It is Shiro's birthday and Shinchan is decorating the house with Ribbons. His Mom Misty wants to have some Ribbons of specified lengths only. 
+
+Shinchan went to the shop to buy ribbons. But being a mischief, he bought all ribbons of same length. His Mom Misty has no other option apart from joining the ribbons to form the specified length ribbons. 
+
+She is not allowed to cut the ribbons. Consider that Shinchan has bought sufficient amount of ribbons. Can you tell what is the maximum length of Ribbons that Shinchan can buy so that all the required length ribbons can be formed?
+
+Input Format : 
+First line contains T denoting the number of test cases.
+First line of each test case contains a single integer N denoting the total no of ribbons required.
+Second line of each test case contains N integers (A1...An) denoting the length of ith ribbon.
+
+Output Format : 
+For each test case print a single integer as answer each in a new line.
+
+Constrains
+T<=100
+N<=100
+Ai<=100
+
+Sample Input :
+3
+5
+2 4 6 8 10
+3
+3 6 12
+5
+4 6 12 10 24
+
+Sample Output : 
+2
+3
+2
+
+Explanation : 
+Sample 2
+Shinchan can buy the Ribbons of length 3. Misty can join 2 ribbons to form the ribbon of length 6 and 4 ribbons to form the ribbon of length 12.
+
+
+5. Oswald and Daisy are discussing on the topic of strings. Daisy has a question in her mind and asked Oswald to solve it for her. If Oswald could solve it, then Daisy would buy him an ice-cream. But Oswald is unable to solve it because he is weak in strings.
+
+The string consists of only 'a', 'b' or 'c' (in lower-case). Daisy asked Oswald to make all the characters of the string equal to any of the above 3 characters in minimum number of steps.
+
+She defines one step to be as follows - In one step, a letter (for example - 'a') can make its adjacent letter(s) the same as it is (i.e. 'a'). Also, if there are many occurrences of this letter (i.e. 'a') in the string, all of them can make their adjacent letter(s) equal to this letter (i.e. 'a') in ONE STEP.
+
+Can you help Oswald so that he can get the ice-cream by solving the question ?
+
+Input:
+First line consists of test case (t), followed by a line-break. Then 't' lines follow, each consisiting of a string containing only 'a', 'b' or 'c' (in lower-case).
+
+Output:
+Print 't' lines (for all test cases), i.e. the answer for the above question.
+
+Constraints:
+10 points :
+1<= t <= 20
+1<= (size of string) <= 500
+90 points :
+1<= t <= 20
+1<= (size of string) <= 500000
+
+Sample Input :
+3
+aaaaa
+abcba
+aabbb
+
+Sample Output :
+0
+1
+2
+
+6. In childhood, Hardik was used to play with String! Now he wants to play some of the games which he was used to play but he hardly remembers only one game. In the game, He will give you a string containing all lowercase alphabets. Now you are allowed to perform two operations on this string any number of times but the resultant string should be a palindrome.
+
+First operation is that you can delete any character from the string.
+
+Second operation is that you can swap any two characters in the string.
+
+Score will be same as the length of the resultant string. Now he wants you to get the maximum score. Help him to find the maximum possible score you can get.
+
+Palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam, abba.
+
+Input Format:
+
+First line contains an Integer N, length of the string.
+
+Next line contains a string S of length N containing all lowercase alphabets.
+
+Output Format:
+
+Print the only Integer indicating maximum length of possible palindromic string.
+
+Contstraints:
+
+1<=N<=1000000
+
+Sample Input : 
+4
+aabb
+
+Sample Output : 
+4
+
+Explanation :
+Here we can swap 2nd "a" with 2nd "b" to get string "abba" which is largest possible palindrome. So length of largest possible palindrome is 4.
+
+7. A and B are playing a game. in the game there is a pile of N coins. A always plays first. In a single move, a player can remove X^i coins from the pile (i>=0). It is also given that X is odd. So lets say X=3, then he can remove 1,3,9,27... and so on number of coins from the pile. Both players play optimally. The game is played in alternating turns. The player who can't remove any coins from the pile in his turn loses the game.
+
+So for a given pile size N and X, print the name of winner.
+Input Format
+
+First line contain a integer T denoting the number of testcases. Next T lines contains 2 integers N and X for every test case.
+
+Output Format
+Print the answer to every test case in a new line.
+
+Constraints
+1<= N,X,T <= 10^5
+
+Sample Input :
+2
+4 1
+3 3
+
+Sample Output :
+B
+A
+
+Explanation :
+1st test case - A can remove only 1 coin in his first move. Then B removes 1 coin in the second move. In third move, A removes one more coin. B removes the last coin remaining in the fourth move . Now the piles has 0 coins hence B wins the game.
+
+2nd test case - A removes 3 coins in his first move and now B can't remove any coin. Hence A wins the game.
+
+8. Rick and Morty are invited for a meeting at planet Gazorpazorp. So they want to travel from Earth to Gazorpazorp and back. Now on their way to Gazorpazorp, they encounter N space stations, at various locations. These space stations are of two types - type1 and type2. Type 1 allows multiple visits, while Type 2 allows at most one visit.
+
+Now you have to help Rick and Morty find a stratergy, such that the maximum distance they travel without visiting any space station is minimised.
+
+Note: They can visit type 2 space stations at most one time on the entire round trip(Earth -> Gazorpazorp -> Earth), but can visit type 1 space stations as many times as they like.
+
+Input:
+The first line contains 2 integers -N,D- the number of space stations and distance between Earth and Gazorpazorp.
+Next N line contains 2 integer - t,d- denoting that type t (1 or 2) space station is present at distance d from Earth.
+
+Output:
+Print a single integer, the minimized maximum distance they travel without visiting any space station.
+
+Constraint:
+0<= N <=100000
+1<= D <=1000000000
+1<= t <=2
+1<= d <D
+
+Sample Input :
+2 10
+1 3
+2 6
+
+Sample Output :
+7
+
+Explanation :
+The optimal strategy for this case is to visit space station at distance 3 and space station at distance 6 while going from earth to Gazorpazorp and visit space station 3 while coming back.
+Note: you cannot visit space station at distance 6 while coming back as it is a type 2 space station and so it allows at most 1 visit.
+
+9. Ciri has recently learnt how to calculate GCD (greatest common divisor) of two numbers. To test her understanding, Geralt asks her to calculate GCD of 2 numbers a and b. 
+Ciri easily calculates the answer. Now to make the problem harder, he has asked q questions in which each one requires to calcuate greatest number in range  which divides both a and b. 
+Ciri won't be able to solve all questions in time. So, she has asked you to solve the questions for her.
+
+Input Format
+First line consists of three integers, a, b and q.
+Each of next q lines consists of two integers l and r, denoting the given range.
+
+Output Format
+Output q lines giving answer to each of the corresponding range.
+If there is no valid number in given range, output "-1"(without quotes).
+
+Sample Input :
+12 16
+5
+1 20
+1 4
+1 3
+10 20
+10 30
+
+Sample Output : 
+4
+4
+2
+-1
+-1
+
+Explanation : 
+For first question, 4 is the largest number in range [1, 20] which divides both 12 and 16.
+
+For second question, 4 is the largest number in range [1, 4] which divides both 12 and 16.
+
+For third question, 2 is the largest number in range [1, 3] which divides both 12 and 16.
+
+For fourth question, there is no number in range [10, 20] which divides both 12 and 16.
+
+For second question, there is no number in range [10, 30] which divides both 12 and 16.
+
+10. Geralt is an expert in crafting bombs. He has recently purchased a lot of raw material and has decided to make as many bombs as possible. After crafting all the bombs, he has come to the conclusion that he can't take all the bombs with him. So, he has to place these extra bombs in a stash. This stash is in the shape of a cylinder. Since, he likes doing unusual things, he only wants to place the bombs such that each one touches the curved boundary of the stash. Also, he doesn't want to place any bomb on top of another bomb. Help him in finding if he can place bombs in this way or not given that radius of stash is R and number of extra bombs is n and each one is of radius r.
+
+Input Format
+First line contains t, number of test cases.
+Each of the next t lines contains n, r and R, number of bombs to be placed, radius of each bomb and radius of the cylindrical stash.
+
+Output Format
+Output t lines with each line containing output to corresponding test case.
+Output "yes" if it is possible to place all n bombs and "no" otherwise.
+
+Sample Input :
+3
+1 5 5
+3 4 10
+5 4 10
+
+Sample Output :
+yes
+yes
+no
+
+Explanation : 
+For first case, one bomb with radius 5 can be placed in a stash of radius 5 and will touch it's circumference.
+
+For second case, it is possible to place 3 bombs with radius 4 in a stash of radius 10 and will touch it's circumference.
+
+For third case, it is not possible to place 5 bombs with radius 4 in a stash of radius 10 such that they will touch it's circumference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
